@@ -3,9 +3,6 @@ ________________________________________________________
 
        PROJETO 1 - B1CG2
        Cena Interna: Cozinha
-       
-       Nome: MaÌra Satiko Tabata
-       Prontu·rio: 1561545 
 ________________________________________________________
 */
 
@@ -61,11 +58,11 @@ ________________________________________________________
 /*
 ________________________________________________________
 
-                ConfiguraÁıes b·sicas
+                Configura√ß√µes b√°sicas
 ________________________________________________________
 */
 
-//C‚mera                     
+//C√¢mera                     
 camera {
      location <-7.5, 7, -10.4>  
      look_at <6, 4, 0>  
@@ -114,7 +111,7 @@ light_source {  <-1,8,-4>, color White }
 /*
 ________________________________________________________
 
-           DeclaraÁıes de objetos da cena
+           Declara√ß√µes de objetos da cena
 ________________________________________________________
 */ 
 
@@ -165,7 +162,7 @@ object { sinkShape scale < 1, 3, 1 > translate 12 * INCH * 1.5 * y }
         rotate y*270     
     }
 
-//Fog„o     
+//Fog√£o     
 #declare fogao2 =   
     object {
         Stove(
@@ -190,7 +187,7 @@ box {
      rotate y*90 translate <5.65, 0.8, -2.55> 
      }
      
-//M·rmore dos balcıes  
+//M√°rmore dos balc√µes  
 #declare marmore =    
 box{
         <0, 0, 1>,< 10, 0.05, 2>  
@@ -237,7 +234,7 @@ object {
 /*
 ________________________________________________________
 
-                ConstruÁ„o da cena
+                Constru√ß√£o da cena
 ________________________________________________________
 */
 union{       
@@ -246,13 +243,13 @@ union{
         object{geladeira translate <-1, 0, 2.5>}  //object{geladeira rotate y * 90 translate <9.1, 0, -5.9>}  
         
         
-        //Arm·rios do ch„o 
+        //Arm√°rios do ch√£o 
         //object{armarioBottomGaveta scale 0.1 translate x*-9.5}                 
         
         object{armarioBottomGavetaMini scale 0.1 translate x*-0.1}  
         
         union {
-                //Buraco da pia --> difference no arm·rio e m·rmore
+                //Buraco da pia --> difference no arm√°rio e m√°rmore
                 difference{         
                         union{
                                 object{armarioBottom scale 0.1 translate x*0.8}          
@@ -282,7 +279,7 @@ union{
         object{microwave scale 0.5 rotate y*225 translate <7,3.5,0>}  
         
         
-        //Fog„o 
+        //Fog√£o 
         object{fogao2 scale 0.1 rotate y*180 translate <9.2, 0.1, -2.3>}  
         
         object{fogao translate <34122.367188, -3031.653747, -30008.156733> translate y*1710  translate z*-2500 scale 0.1 scale 0.1 scale 0.35 rotate y*90 translate <7.8, 0.9,-5.4> } 
@@ -290,7 +287,7 @@ union{
         object{forno}  
         
         
-        //Arm·rios da parede
+        //Arm√°rios da parede
         //object{armarioTopMini2 scale 0.1 translate <5, 6.2, 1>}            
         
         object{armarioCantoDireitoTop scale 0.1 scale -1  rotate y*180  translate <5.4, 9, -0.8>}  
@@ -308,7 +305,7 @@ union{
         object{liquidificador scale 0.1 scale 0.5 translate <7.8, 3.65, -1.8>} 
         
         
-        //Botij„o de g·s
+        //Botij√£o de g√°s
         object{gas texture {BrushedNickelTexture} scale 0.3 rotate -y*120 translate <8,0.3,-8>} 
         
         
@@ -322,7 +319,7 @@ union{
                         }   
         }
         
-        //Ch„o
+        //Ch√£o
         union{
                 object{parede rotate x*90 scale x*1.5 translate <-13, 11, -6>texture { pigment { image_map {"chao.jpg"} rotate x*90}
                          //normal { bumps 0.5 scale 0.00000001 }
@@ -431,7 +428,7 @@ union{
         
            
         
-        //M·rmore dos balcıes 
+        //M√°rmore dos balc√µes 
         object{marmore translate <12.5, 0, 4> scale x*0.5 rotate y*45  translate <-2, 0, 1.5>} 
         
         object{marmore rotate y*90 translate x*6.8 translate z*-0.3 } 
