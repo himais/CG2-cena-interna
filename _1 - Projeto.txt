@@ -1,8 +1,0 @@
-PROJETO 1 - B1CG2
-Cena Interna: Cozinha
-       
-Nome: Maíra Satiko Tabata
-Prontuário: 1561545 
-
-- Arquivo principal: _cozinha.pov
-- Versão do Pov-Ray: v3.7

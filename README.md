@@ -40,5 +40,8 @@ Segue abaixo alguns dos recursos vistos em aula. Não é obrigatório o uso de t
 
 - Pov-Ray: v3.7
 
+## Visualização
+Arquivo principal: _cozinha.pov
+
 ## Resultado Final
 ![Imagem final](https://github.com/himais/Projeto-1-CG2---Cozinha/blob/master/_0%20-%20Projeto%201.png?raw=true)
