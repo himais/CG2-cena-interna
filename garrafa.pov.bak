@@ -1,0 +1,24 @@
+
+
+
+//Desenho da garrafa
+#declare garrafa =
+sor {
+        8,
+        <0.50, 0.0>,
+        <0.6, 0.2>,
+        <0.6, 3.0>,
+        <0.25, 3.4>,
+        <0.25, 4.0>,
+        <0.27, 4.1>,
+        <0.27, 4.3>,
+        <0.25, 1.0>  
+                              
+        //    //NBwinebottle     
+        finish{ F_Glass5 }
+        interior { ior Water_Ior }       
+} 
+
+//Garrafa esquerda
+
+  

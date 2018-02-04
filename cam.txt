@@ -1,0 +1,10 @@
+ver de lado:
+ location <-4, 7, -15> //ver de cima: y = 9  virar para esquerda -x // virar para a direita +x    sink = <0, 8, -6>  
+     look_at <-4, 2, 2> //0, 3, 2  
+
+
+ object{cozinha rotate y*-85 translate <0,0,0> } 
+
+
+     location <-8, 7, -5> //ver de cima: y = 9  virar para esquerda -x // virar para a direita +x    sink = <0, 8, -6>  
+     look_at <15, 2, 2> //0, 3, 2 

@@ -1,0 +1,75 @@
+//=================COPYRIGHT ISSUES===============================================================
+//This model is Let-me-know-ware, meaning that :
+//You can use it without prior asking, but you MUST tell me
+//that you used it (if you publish online, offline,...).
+//You must also mention my name somewhere in the sources...
+//Fabien Mosen 101741.541@compuserve.com
+//=================STANDARD SCENE===============================================================
+#include "colors.inc"
+camera {location <20,20,20> direction <0,0,2> look_at <0,5,0>}       
+plane {y,0 pigment {checker color Pink+White color White scale 4}}
+light_source {<40,50,-20> White*2}
+//================================================================================
+//      A LITTLE CACTUS
+//================================================================================
+// A little spherical cactus in it's little plastic pot,
+// And many many many little spikes
+// Stands along the Y axis, approx 10 units (cm) high.
+// undeclare the "no_shadow" below to speed up
+
+#declare r1=seed(0);
+#declare PiqUnit = union { 
+  cone {<0,0,0>,.02,<0,1,0>,0 pigment {Wheat} rotate <rand(r1)*50,rand(r1)*30,rand(r1)*30>}
+  cone {<0,0,0>,.02,<0,1,0>,0 pigment {Wheat} rotate <rand(r1)*50,rand(r1)*30,rand(r1)*30>}
+  cone {<0,0,0>,.02,<0,1,0>,0 pigment {Wheat} rotate <rand(r1)*50,rand(r1)*30,rand(r1)*30>}
+  translate y*2.8
+  bounded_by {cylinder {<0,2.5,0>,<0,4,0>,1}}
+  //no_shadow
+  }
+
+#declare CacUnit=union {
+        intersection {
+                sphere {<0,0, 3>,3.5}
+                sphere {<0,0,-3>,3.5} 
+                pigment {SeaGreen} 
+                finish {phong .3} 
+                normal {bumps .2} 
+                scale 1.5
+                }
+        #declare boucle=0 ;
+        #while (boucle < 24)
+                object {PiqUnit rotate z*(360/24*boucle)}
+        #declare boucle=boucle+1 ;
+        #end
+}
+
+#declare Cactus=union {
+        #declare boucle=0  ;
+        #while (boucle < 12)
+                object {CacUnit rotate y*(360/12*boucle)}
+        #declare boucle=boucle+1 ;
+        #end
+}
+
+#declare LittlePot1=union {
+        cone {<0,0,0>,2.5,<0,5.1,0>,3}
+        cone {<0,4.9,0>,3.3,<0,6.5,0>,3.6}
+}
+
+#declare LittlePot=union {
+        difference {
+                object {LittlePot1}
+                object {LittlePot1 scale .95 translate y*.4}
+                pigment {Firebrick+Orange/4} 
+                 finish {phong .2 specular .4}
+                 normal {ripples .1 scale <1,.1,1>}
+                 }
+        cone {<0,0,0>,2.4,<0,4.7,0>,2.9 pigment {Gray10}}
+}
+//================================================================================
+//      PLACING BOTH CACTUS AND POT
+//================================================================================
+union {
+object {LittlePot}
+object {Cactus bounded_by {sphere {0,4}} translate y*7}                   
+}
